@@ -1,0 +1,16 @@
+<div class="c-todo-item" [ngClass]="{'c-todo-item--done': isDone}">
+  <input
+    type="checkbox"
+    class="c-todo-item__checkbox"
+    [ngModel]="isDone"
+    (ngModelChange)="mark($event)"
+  >
+
+  <div class="c-todo-item__description">
+    {{ description }}
+  </div>
+
+  <button class="c-todo-item__delete" (click)="markDelete.emit()">
+    Delete
+  </button>
+</div>

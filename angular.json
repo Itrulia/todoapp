@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -123,5 +123,12 @@
       }
     }
   },
-  "defaultProject": "todo"
+  "defaultProject": "todo",
+  "schematics": {
+      "@schematics/angular:component": {
+          "styleext": "scss",
+          "changeDetection": "OnPush",
+          "viewEncapsulation": "Emulated"
+      }
+  }
 }

@@ -1,0 +1,13 @@
+<form class="c-todo-create">
+  <input
+    type="text"
+    class="c-todo-create__description"
+    [(ngModel)]="description"
+    name="description"
+  />
+
+  <button
+    class="c-todo-create__add"
+    (click)="addItem(description)"
+  >Add</button>
+</form>

@@ -1,0 +1,14 @@
+<div class="c-todo">
+  <app-todo-create
+    (add)="add($event)"
+  ></app-todo-create>
+
+  <app-todo-item
+    *ngFor="let item of todoItems; trackBy: trackByIndex"
+    [description]="item.description"
+    [isDone]="item.isDone"
+    (markDone)="markDone($event, item.id)"
+    (markDelete)="remove(item.id)"
+  >
+  </app-todo-item>
+</div>
